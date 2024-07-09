@@ -198,7 +198,14 @@ fun TimeSelectionScreen(
                     selectedRadioButtonId = it
                     onSetSelectionClick(it)
                 },
-                onDeleteItemClick = onDeleteItemClick
+                onDeleteItemClick = onDeleteItemClick,
+                onInfoButtonClick = {configInfo ->
+                    scope.launch {
+                        snackbarHostState.showSnackbar(
+                            message = configInfo,
+                        )
+                    }
+                }
             )
         },
         snackbarHost = {

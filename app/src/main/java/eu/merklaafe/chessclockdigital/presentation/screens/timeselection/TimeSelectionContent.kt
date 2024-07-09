@@ -70,6 +70,7 @@ fun TimeSelectionContent(
     selectedRadioButtonId: Int,
     onRadioButtonClick: (Int) -> Unit,
     onDeleteItemClick: (Int) -> Unit,
+    onInfoButtonClick: (String) -> Unit,
 ) {
     val positionList = ArrayList<Int?>()
 
@@ -98,12 +99,14 @@ fun TimeSelectionContent(
                                 .padding(bottom = 10.dp)
                         ) {
                             var symbol = ""
+
+                            var categoryInfo = ""
                             when (gameCategory) {
-                                GameCategory.Bullet -> {}
-                                GameCategory.Blitz -> {}
-                                GameCategory.Rapid -> {}
-                                GameCategory.Classic -> {}
-                                GameCategory.Special -> {}
+                                GameCategory.Bullet -> {categoryInfo = "All games with a total time control (including add on time) of less than 3 minutes."}
+                                GameCategory.Blitz -> {categoryInfo = "All games with a total time control (including add on time) of less than 15 minutes."}
+                                GameCategory.Rapid -> {categoryInfo = "All games with a total time control (including add on time) of less than 60 minutes."}
+                                GameCategory.Classic -> {categoryInfo = "All games with a total time control (including add on time) of 60 minutes or more."}
+                                GameCategory.Special -> {categoryInfo = "All games with different time settings for each player."}
                             }
 
                             Surface(
@@ -130,7 +133,7 @@ fun TimeSelectionContent(
                                         modifier = Modifier
                                             .weight(1F)
                                             .fillMaxHeight(),
-                                        onClick = { /*toDo*/ }
+                                        onClick = { onInfoButtonClick(categoryInfo) }
                                     ) {
                                         Icon(
                                             modifier = Modifier.fillMaxSize(),
