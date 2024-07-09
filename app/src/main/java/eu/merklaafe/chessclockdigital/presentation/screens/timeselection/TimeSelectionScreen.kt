@@ -201,8 +201,9 @@ fun TimeSelectionScreen(
                 onDeleteItemClick = onDeleteItemClick,
                 onInfoButtonClick = {configInfo ->
                     scope.launch {
+                        snackbarHostState.currentSnackbarData?.dismiss()
                         snackbarHostState.showSnackbar(
-                            message = configInfo,
+                            message = configInfo
                         )
                     }
                 }
