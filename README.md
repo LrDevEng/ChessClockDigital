@@ -9,3 +9,7 @@ Developed on my previous account: https://github.com/MrLukiLegend/ChessClockDigi
 - Jetpack Compose
 - MVVM
 - Dependency Injection
+
+## Usage
+
+To use on your physical device, downlad apk file here: app/apk
