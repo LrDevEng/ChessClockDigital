@@ -12,4 +12,4 @@ Developed on my previous account: https://github.com/MrLukiLegend/ChessClockDigi
 
 ## Usage
 
-To use on your physical device, downlad apk file here: app/apk
+To use on your physical device, downlad apk file here (build version debug): app/apk
