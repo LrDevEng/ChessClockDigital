@@ -6,6 +6,8 @@ Developed on my previous account: https://github.com/MrLukiLegend/ChessClockDigi
 
 ## Impressions
 
+(Video speed: 1.5x)
+
 https://github.com/user-attachments/assets/f5fce669-486d-4c0e-b725-7278145938f4
 
 ## Technologies
